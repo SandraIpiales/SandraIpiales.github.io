@@ -10,6 +10,7 @@ body {
 }
 
 .titulo {
+
     font-size: 40px;
     font-family: 'Dancing Script', cursive;
     margin-bottom: 40px;
@@ -17,9 +18,10 @@ body {
 }
 
 .subtitulo {
-    margin: 0;
+    margin-top: 100px;
+    background-color: #b80b78;
     color: #000;
-    display: inline;
+    /*display: inline;*/
     font-size: 50px;
     font-weight: 500;
     text-transform: uppercase;
