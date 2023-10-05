@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Caompatible" content="ie=edge">
     <title>Materilize | Carrousel y Media</title>
+    <link rel="stylesheet" href="./navbar.css">
    
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Raleway:500,600&display=swap" rel="stylesheet">
@@ -16,7 +17,31 @@
     <!-- CSS Estilos -->
     <link rel="stylesheet" href="estilos.css">
 </head>
+
 <body>
+    <header>
+        <div class="back">
+            <div class="menu container2">    
+                <nav class="navbar">
+                    <ul>
+                        <li>
+                         <a   href="{{ url_for('index') }}">
+                             <div>Inicio</div>
+                         </a></li>
+                        <li><a  href="{{ url_for('menu') }}">
+                         <div class="">Menu</div></a></li>
+                        
+                    </ul>                                  
+                </nav>
+            </div>
+             <div class="header-n">
+                    <img src="../static/access/elementosV/logo_m.png" alt="" class="header-img-n"/>
+                    <div class="text-header">
+                         <span>SALSEC</span>
+                    </div>
+               </div>
+        </div>
+      </header>
     <div class="container">
         <div class="row">
             <div class="col s12">
