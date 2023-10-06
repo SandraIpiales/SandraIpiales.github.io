@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Oswald:wght@700&family=Trispace&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+
+.slide-container{
+ 
+
+  max-width: 1800px;
+  width: 100%;
+
+
+}
+.slide-content{
+  margin: 0 2%;
+  border-radius: 25px;
+  
+}
+.cardletras{
+  border-radius: 25px;
+  background-image: url("../access/pantallas/fletras.jpg");
+  background-size: cover;
+  text-decoration: none;
+  transition: 0.3s;
+  
+}
+/*Encabezado de Menu*/
+.menu_content{
+  display: flex;
+  flex-direction: column;
+}
+.contenedor_ABC{
+  display: flex;
+  flex-direction: row;
+  height: 360px;
+  margin-bottom: 15px;
+}
+.ABC_img{
+flex: 40%;
+}
+.imgABC{
+  width: 90%;
+  height: 100%;
+  margin-top: 10px;
+}
+.header_m{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 2% 7% 0% 39%;
+}
+.header-img-m{
+  width: 18%;
+  height: 60%;
+  margin : 12px;
+  justify-content: center;
+  align-items: center;
+}
+.texto{
+  flex: 60%;
+  display: flex;
+  flex-direction: column;
+}
+.text-ABC{
+  font-family: 'Monserrat', sans-serif; 
+  font-size: 3.5vw;
+  color: #f37108;
+  margin: 125px 0 0 5px;
+}
+
+.card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: auto; 
+  border-radius: 25px;
+     
+}
+.card-content:hover{
+    box-shadow: 0 0px 20px 0 rgba(223, 226, 232, 0.268);
+    background-color: #0528506a; /* Nuevo color al pasar el mouse */
+
+}
+
+.letra{
+  font-family: 'Trispace', sans-serif;
+  margin: 20px ;
+  font-size: 2vh;
+  font-weight: 500;
+  padding: 30px;
+  border-radius: 15px;
+  color:#e8e4e4;
+  text-decoration: none;
+  
+}
+
+.button{
+  border: none;
+  font-size: 16px;
+  color: #FFF;
+  padding: 8px 16px;
+  background-color: #4070F4;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button:hover{
+  background: #265DF2;
+}
+
+@media screen and (max-width: 990px)  {
+  .contenedor_ABC{
+    flex-direction: column-reverse;
+    top: 30%;
+    height: 50%;
+    width: 100%;
+
+  }
+  .ABC_img{
+    flex: 20%; 
+    width: 80%;
+    height: 45%;
+
+    }
+  .texto{
+      flex: 40%;
+      justify-items: center;
+      width: 100%;
+      height: 25px;
+      margin: 10px;
+      
+    }
+  .header_m{
+      flex: 25%; 
+      flex-direction: column;
+      justify-content: center;
+      margin: auto;
+      
+      
+     
+    }
+  .text-ABC{
+      flex: 75%;
+      top: 20px;
+      margin: auto;
+
+    }
+    .letra{
+      font-size: 32vw;
+      
+    }
+
+
+}
+@media screen and (max-width: 768px)  {
+  .slide-content{
+    top:75%;
+    margin: 0 10px;
+  }
+  .swiper-navBtn{
+    display: none;
+  }
+  .letra{
+    font-size: 40vw;
+    
+  }
+}
+

@@ -17,6 +17,8 @@
     <!-- CSS Estilos -->
     <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="carrusel.css">
+    <link rel="stylesheet" href="estilo/menu.css">
+    <link rel="stylesheet" href="estilo/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
             
 </head>
@@ -39,7 +41,7 @@
       </header>
 
    
-      <div class="sliderportada">
+      <!--<div class="sliderportada">
         <div class="row">
             <div class="col s12">
                 <div class="carousel center-align">
@@ -52,7 +54,21 @@
                 
 
                     <div class="carousel-item">
-                        <h2 class="subtitulo">Flor a Crochet</h2>
+                        <h2 class="subtitulo">Flores</h2>
+                        <div class="linea-division"></div>
+                        <p class="sabor">Girasol</p>
+                        <img src="img/flor.png" >
+                    </div>
+                    <div class="carousel-item">
+                        <h2 class="subtitulo">Bolsos</h2>
+                        <div class="linea-division"></div>
+                        <p class="sabor">Glaseadas</p>
+                        <img src="img/chocolate.jpg" alt="">
+                    </div>
+                
+
+                    <div class="carousel-item">
+                        <h2 class="subtitulo">Amigurumis</h2>
                         <div class="linea-division"></div>
                         <p class="sabor">Girasol</p>
                         <img src="img/flor.png" >
@@ -64,32 +80,58 @@
                         <img src="img/chocolate.jpg" alt="">
                     </div>
                 
-
-                    <div class="carousel-item">
-                        <h2 class="subtitulo">Flor a Crochet</h2>
-                        <div class="linea-division"></div>
-                        <p class="sabor">Girasol</p>
-                        <img src="img/flor.png" >
-                    </div>
-                    <div class="carousel-item">
-                        <h2 class="subtitulo">Donas</h2>
-                        <div class="linea-division"></div>
-                        <p class="sabor">Glaseadas</p>
-                        <img src="img/chocolate.jpg" alt="">
-                    </div>
-                
-
-                    <div class="carousel-item">
-                        <h2 class="subtitulo">Flor a Crochet</h2>
-                        <div class="linea-division"></div>
-                        <p class="sabor">Girasol</p>
-                        <img src="img/flor.png" >
-                    </div>
                 </div>
             </div>
         </div>
+    </div>-->
+    <div class="contenedorT">
+        <div class="contenedorPortada">img</div>
+        <div>
+            <div class="slide-container swiper">
+            <div  class="slide-content">
+                    <div class="card-wrapper swiper-wrapper" id="enlacesContainer">
+                        <!-- El contenido de las tarjetas será generado dinámicamente -->
+                    </div>
+            </div>
+            <div class="swiper-button-next "></div>
+            <div class="swiper-button-prev "></div>
+            <div class="swiper-pagination"></div>
+        </div>
+      </div>
     </div>
     
+    
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/script-slider.js"></script>
+    <script>
+        // Arreglo de strings para los enlaces
+        var letras = ["Collares", "Anillos", "Flores", "Gorros","Bolsos"];
+        
+        // Obtener el contenedor de los enlaces por su ID
+        var enlacesContainer = document.getElementById("enlacesContainer");
+        
+        // Crear los enlaces dinámicamente desde el arreglo de letras
+        for (var i = 0; i < letras.length; i++) {
+        var enlaceDiv = document.createElement("div");
+        enlaceDiv.className = "cardletras swiper-slide";
+    
+        var enlaceContent = document.createElement("div");
+        enlaceContent.className = "card-content";
+        
+    
+        var enlace = document.createElement("a");
+        enlace.id="inicioBoton";
+        enlace.href = "{{ url_for('letra') }}"; 
+        enlace.className = "letra";
+        enlace.textContent = letras[i];
+        
+    
+        enlaceContent.appendChild(enlace);
+        enlaceDiv.appendChild(enlaceContent);
+        enlacesContainer.appendChild(enlaceDiv);
+        } 
+    
+    </script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
             
