@@ -23,9 +23,12 @@ body {
     
     border-radius: 15px;
     box-shadow: 7px 13px 37px rgba(0, 0, 0, 0.4);
+    flex: 50%;
 
 }
-
+.sliderContenedor{
+    flex: 50%;
+}
 .titulo {
 
     font-size: 40px;
@@ -39,7 +42,7 @@ body {
     background-color: #b80b78;
     color: #000;
     /*display: inline;*/
-    font-size: 5vh;
+    font-size: 5vw;
     font-weight: 500;
     text-transform: uppercase;
 }

@@ -41,7 +41,7 @@
       </header>
 
    
-      <!--<div class="sliderportada">
+     <div class="sliderportada">
         <div class="row">
             <div class="col s12">
                 <div class="carousel center-align">
@@ -83,10 +83,9 @@
                 </div>
             </div>
         </div>
-    </div>-->
-    <div class="contenedorT">
-        <div class="contenedorPortada">img</div>
-        <div>
+    </div>
+
+        <div class="sliderContenedor">
             <div class="slide-container swiper">
             <div  class="slide-content">
                     <div class="card-wrapper swiper-wrapper" id="enlacesContainer">
@@ -121,8 +120,9 @@
     
         var enlace = document.createElement("a");
         enlace.id="inicioBoton";
-        enlace.href = "{{ url_for('letra') }}"; 
+        enlace.href = "menu.html"; 
         enlace.className = "letra";
+        
         enlace.textContent = letras[i];
         
     

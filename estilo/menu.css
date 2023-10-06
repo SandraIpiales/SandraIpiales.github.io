@@ -8,7 +8,7 @@
 
   max-width: 1800px;
   width: 100%;
-
+  display: flex;
 
 }
 .slide-content{
@@ -84,12 +84,12 @@ flex: 40%;
 
 .letra{
   font-family: 'Trispace', sans-serif;
-  margin: 20px ;
-  font-size: 2vh;
+  
+  font-size: 2px;
   font-weight: 500;
   padding: 30px;
   border-radius: 15px;
-  color:#e8e4e4;
+  color:#792727;
   text-decoration: none;
   
 }
