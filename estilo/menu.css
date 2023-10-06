@@ -4,9 +4,7 @@
 
 
 .slide-container{
- 
-
-  max-width: 1800px;
+  max-width: 1500px;
   width: 100%;
   display: flex;
 
@@ -18,7 +16,8 @@
 }
 .cardletras{
   border-radius: 25px;
-  background-image: url("../access/pantallas/fletras.jpg");
+  border: 2px solid #e7cc9a; 
+  box-shadow: 0 10px 20px 0 rgba(253, 222, 188, 0.382);
   background-size: cover;
   text-decoration: none;
   transition: 0.3s;
@@ -78,14 +77,14 @@ flex: 40%;
 }
 .card-content:hover{
     box-shadow: 0 0px 20px 0 rgba(223, 226, 232, 0.268);
-    background-color: #0528506a; /* Nuevo color al pasar el mouse */
+    background-color: #d69f4680; /* Nuevo color al pasar el mouse */
 
 }
 
 .letra{
   font-family: 'Trispace', sans-serif;
   
-  font-size: 2px;
+  font-size: 2vh;
   font-weight: 500;
   padding: 30px;
   border-radius: 15px;
@@ -145,10 +144,7 @@ flex: 40%;
       margin: auto;
 
     }
-    .letra{
-      font-size: 32vw;
-      
-    }
+
 
 
 }
@@ -161,7 +157,7 @@ flex: 40%;
     display: none;
   }
   .letra{
-    font-size: 40vw;
+    font-size: 4vw;
     
   }
 }
