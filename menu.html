@@ -162,6 +162,7 @@
          const urlParts = link.href.split('/');
          const imageName = urlParts[urlParts.length - 1];
          img.src = folderPath + imageName;
+         console.log("txxtDentro", img.src)
         
          const gridItem = document.createElement('div');
          gridItem.classList.add('grid-item');
