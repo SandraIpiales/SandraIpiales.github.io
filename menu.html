@@ -64,71 +64,7 @@
       <div id="imageGrid" class="grid-container"></div>
 
     
-   <script>
-   const d_collares = [
-    { "nombre": "Piedras", "precio": "3.50" },
-    { "nombre": "Piedras", "precio": "1.50" },
-    { "nombre": "Piedras", "precio": "6.50" },
-    { "nombre": "Piedras", "precio": "12.50" },
-    { "nombre": "Piedras", "precio": "2.50" },
-    { "nombre": "Piedras", "precio": "2.50" },
-    { "nombre": "Piedras", "precio": "2.50" },
-    { "nombre": "Piedras", "precio": "2.50" },
-    { "nombre": "Piedras", "precio": "2.50" },
-    { "nombre": "Piedras", "precio": "2.50" },
-    { "nombre": "Piedras", "precio": "2.50" },
-    // Agrega más objetos de collares aquí
-    ];
-    // Ruta de la carpeta que contiene las imágenes
-const folderPath = 'https://SandraIpiales.github.io/img/img/collares';
-
-// Elemento contenedor de la cuadrícula
-const imageGrid = document.getElementById('imageGrid');
-
-function loadImages() {
-  // Realizar una petición AJAX para obtener el listado de archivos en la carpeta
-  fetch(folderPath)
-    .then(response => response.text())
-    .then(data => {
-      // Parsear el HTML de la carpeta para obtener los nombres de los archivos
-      const parser = new DOMParser();
-      const htmlDoc = parser.parseFromString(data, 'text/html');
-      const links = Array.from(htmlDoc.querySelectorAll('a'));
-
-      // Filtrar solo los enlaces que son imágenes (por extensión)
-      const imageLinks = links.filter(link => link.href.match(/\.(jpg|jpeg|png|gif)$/i));
-
-      // Crear elementos de imagen y agregarlos a la cuadrícula
-      imageLinks.forEach((link, index) => {
-        const img = document.createElement('img');
-        const urlParts = link.href.split('/');
-        const imageName = urlParts[urlParts.length - 1];
-        img.src = folderPath + imageName;
-       
-        const gridItem = document.createElement('div');
-        gridItem.classList.add('grid-item');
-        gridItem.appendChild(img);
-
-        // Crear un elemento de texto y agregarlo al gridItem
-        const text = document.createElement('div');
-        text.textContent = `${d_collares[index].nombre} `;
-        text.classList.add('textoNombre');
-        // Crear un elemento de texto y agregarlo al gridItem
-        const text2 = document.createElement('div');
-        text2.textContent = ` Precio: $${d_collares[index].precio}`;
-        gridItem.appendChild(text);
-        gridItem.appendChild(text2);
-
-        imageGrid.appendChild(gridItem);
-      });
-    })
-    .catch(error => console.error('Error:', error));
-}
-
-// Llamar a la función para cargar y mostrar imágenes
-loadImages();
-
-   </script>
+   
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/script-slider.js"></script>
     <script>
@@ -185,7 +121,72 @@ loadImages();
     resultadoDiv.textContent = textoTitulo;
 
 </script>
-
+<script>
+    const d_collares = [
+     { "nombre": "Piedras", "precio": "3.50" },
+     { "nombre": "Piedras", "precio": "1.50" },
+     { "nombre": "Piedras", "precio": "6.50" },
+     { "nombre": "Piedras", "precio": "12.50" },
+     { "nombre": "Piedras", "precio": "2.50" },
+     { "nombre": "Piedras", "precio": "2.50" },
+     { "nombre": "Piedras", "precio": "2.50" },
+     { "nombre": "Piedras", "precio": "2.50" },
+     { "nombre": "Piedras", "precio": "2.50" },
+     { "nombre": "Piedras", "precio": "2.50" },
+     { "nombre": "Piedras", "precio": "2.50" },
+     // Agrega más objetos de collares aquí
+     ];
+     
+     // Ruta de la carpeta que contiene las imágenes
+ const folderPath = 'img/img/'+`${textoTitulo}`+'/';
+ console.log("Val",textoTitulo)
+ // Elemento contenedor de la cuadrícula
+ const imageGrid = document.getElementById('imageGrid');
+ 
+ function loadImages() {
+   // Realizar una petición AJAX para obtener el listado de archivos en la carpeta
+   fetch(folderPath)
+     .then(response => response.text())
+     .then(data => {
+       // Parsear el HTML de la carpeta para obtener los nombres de los archivos
+       const parser = new DOMParser();
+       const htmlDoc = parser.parseFromString(data, 'text/html');
+       const links = Array.from(htmlDoc.querySelectorAll('a'));
+ 
+       // Filtrar solo los enlaces que son imágenes (por extensión)
+       const imageLinks = links.filter(link => link.href.match(/\.(jpg|jpeg|png|gif)$/i));
+ 
+       // Crear elementos de imagen y agregarlos a la cuadrícula
+       imageLinks.forEach((link, index) => {
+         const img = document.createElement('img');
+         const urlParts = link.href.split('/');
+         const imageName = urlParts[urlParts.length - 1];
+         img.src = folderPath + imageName;
+        
+         const gridItem = document.createElement('div');
+         gridItem.classList.add('grid-item');
+         gridItem.appendChild(img);
+ 
+         // Crear un elemento de texto y agregarlo al gridItem
+         const text = document.createElement('div');
+         text.textContent = `${d_collares[index].nombre} `;
+         text.classList.add('textoNombre');
+         // Crear un elemento de texto y agregarlo al gridItem
+         const text2 = document.createElement('div');
+         text2.textContent = ` Precio: $${d_collares[index].precio}`;
+         gridItem.appendChild(text);
+         gridItem.appendChild(text2);
+ 
+         imageGrid.appendChild(gridItem);
+       });
+     })
+     .catch(error => console.error('Error:', error));
+ }
+ 
+ // Llamar a la función para cargar y mostrar imágenes
+ loadImages();
+ 
+    </script>
 <style>
     body {
         background: #d9a7c7;  /* fallback for old browsers */
