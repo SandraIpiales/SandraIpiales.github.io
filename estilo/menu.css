@@ -7,6 +7,7 @@
   max-width: 1500px;
   width: 100%;
   display: flex;
+  margin: 25px 0;
 
 }
 .slide-content{
@@ -15,9 +16,9 @@
   
 }
 .cardletras{
-  border-radius: 25px;
-  border: 2px solid #e7cc9a; 
-  box-shadow: 0 10px 20px 0 rgba(253, 222, 188, 0.382);
+  border-radius: 70%;
+  border: 2px solid #1c010e; 
+  box-shadow: 0 10px 20px 0 rgba(253, 188, 224, 0.382);
   background-size: cover;
   text-decoration: none;
   transition: 0.3s;
@@ -77,14 +78,15 @@ flex: 40%;
 }
 .card-content:hover{
     box-shadow: 0 0px 20px 0 rgba(223, 226, 232, 0.268);
-    background-color: #d69f4680; /* Nuevo color al pasar el mouse */
+    background-color: #d646ab2d; /* Nuevo color al pasar el mouse */
+    border-radius: 75%;
 
 }
 
 .letra{
   font-family: 'Trispace', sans-serif;
   
-  font-size: 2vh;
+  font-size: 1.2vw;
   font-weight: 500;
   padding: 30px;
   border-radius: 15px;

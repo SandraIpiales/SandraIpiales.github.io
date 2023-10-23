@@ -13,7 +13,11 @@
     <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="carrusel.css">
     <link rel="stylesheet" href="./estilo/galeria.css">
+    <link rel="stylesheet" href="estilo/menu.css">
+    <link rel="stylesheet" href="estilo/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
 
 </head>
 <body >
@@ -21,28 +25,143 @@
         <div class="containerTitulo">
             <div>
                 <div class="menuTitulo">
-                    <i class="material-icons">mail_outline</i>
+
+                    <a id="miBoton" href="https://www.instagram.com/sai.rose.ec/"  target="_blank" class="circular-button-r">
+                        <i class="fab fa-instagram" style="margin: 15px auto; font-size:40px;color:rgb(223, 32, 127);text-shadow:2px 2px 4px #b6a6a697;"></i>
+                    </a>
+                    <a id="miBoton" href="https://www.facebook.com/sai.rose.ec"  target="_blank" class="circular-button-r">
+                        <i class="fab fa-facebook" style="margin: 15px 5px; font-size:40px;color:rgb(223, 32, 127);text-shadow:2px 2px 4px #b6a6a697;"></i>
+                    </a>
                 </div>
             </div>
-            <div class="titulo"> Sai Rose
-            </div>
+            <div class="titulo"> Sai Rose </div>
             <div class="fotoPerfil">
                 <img src="img/sairose.png" alt="">
             </div>
 
         </div>
       </header>
-      <div class="seleccionado" id="titulo2">    </div>
-    <div class="row">
-        <div class="col s4">
-            <div class="cardGaleria">
-                <img src="img/chocolate.jpg"/>
-            </div>
-            6-columns (one-half)</div>
-        <div class="col s4">6-columns (one-half)</div>
-        <div class="col s4">6-columns (one-half)</div>
-
+      <div class="sliderContenedor">
+        <div class="slide-container swiper">
+        <div  class="slide-content">
+                <div class="card-wrapper swiper-wrapper" id="enlacesContainer">
+                    <!-- El contenido de las tarjetas será generado dinámicamente -->
+                </div>
+        </div>
+        <div class="swiper-button-next "></div>
+        <div class="swiper-button-prev "></div>
+        <div class="swiper-pagination"></div>
     </div>
+  </div>
+      <div class="seleccionado" id="titulo2">    </div>
+      <div id="imageGrid" class="grid-container"></div>
+
+    
+   <script>
+   const d_collares = [
+    { "nombre": "Piedras", "precio": "3.50" },
+    { "nombre": "Piedras", "precio": "1.50" },
+    { "nombre": "Piedras", "precio": "6.50" },
+    { "nombre": "Piedras", "precio": "12.50" },
+    { "nombre": "Piedras", "precio": "2.50" },
+    { "nombre": "Piedras", "precio": "2.50" },
+    { "nombre": "Piedras", "precio": "2.50" },
+    { "nombre": "Piedras", "precio": "2.50" },
+    { "nombre": "Piedras", "precio": "2.50" },
+    { "nombre": "Piedras", "precio": "2.50" },
+    { "nombre": "Piedras", "precio": "2.50" },
+    // Agrega más objetos de collares aquí
+    ];
+    // Ruta de la carpeta que contiene las imágenes
+const folderPath = 'img/img/collares/';
+
+
+// Elemento contenedor de la cuadrícula
+const imageGrid = document.getElementById('imageGrid');
+
+function loadImages() {
+  // Realizar una petición AJAX para obtener el listado de archivos en la carpeta
+  fetch(folderPath)
+    .then(response => response.text())
+    .then(data => {
+      // Parsear el HTML de la carpeta para obtener los nombres de los archivos
+      const parser = new DOMParser();
+      const htmlDoc = parser.parseFromString(data, 'text/html');
+      const links = Array.from(htmlDoc.querySelectorAll('a'));
+
+      // Filtrar solo los enlaces que son imágenes (por extensión)
+      const imageLinks = links.filter(link => link.href.match(/\.(jpg|jpeg|png|gif)$/i));
+
+      // Crear elementos de imagen y agregarlos a la cuadrícula
+      imageLinks.forEach((link, index) => {
+        const img = document.createElement('img');
+        const urlParts = link.href.split('/');
+        const imageName = urlParts[urlParts.length - 1];
+        img.src = folderPath + imageName;
+       
+        const gridItem = document.createElement('div');
+        gridItem.classList.add('grid-item');
+        gridItem.appendChild(img);
+
+        // Crear un elemento de texto y agregarlo al gridItem
+        const text = document.createElement('div');
+        text.textContent = `${d_collares[index].nombre} `;
+        text.classList.add('textoNombre');
+        // Crear un elemento de texto y agregarlo al gridItem
+        const text2 = document.createElement('div');
+        text2.textContent = ` Precio: $${d_collares[index].precio}`;
+        gridItem.appendChild(text);
+        gridItem.appendChild(text2);
+
+        imageGrid.appendChild(gridItem);
+      });
+    })
+    .catch(error => console.error('Error:', error));
+}
+
+// Llamar a la función para cargar y mostrar imágenes
+loadImages();
+
+   </script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/script-slider.js"></script>
+    <script>
+        // Arreglo de strings para los enlaces
+        var letras = ["Collares", "Anillos", "Flores", "Gorros","Bolsos"];
+        
+        // Obtener el contenedor de los enlaces por su ID
+        var enlacesContainer = document.getElementById("enlacesContainer");
+        
+        // Crear los enlaces dinámicamente desde el arreglo de letras
+        for (var i = 0; i < letras.length; i++) {
+        var enlaceDiv = document.createElement("div");
+        enlaceDiv.className = "cardletras swiper-slide";
+    
+        var enlaceContent = document.createElement("div");
+        enlaceContent.className = "card-content";
+        
+    
+        var enlace = document.createElement("a");
+        enlace.id="inicioBoton";
+        enlace.href = "menu.html"; 
+        enlace.className = "letra";
+        enlace.textContent = letras[i];    
+        enlaceContent.appendChild(enlace);
+       
+        enlaceDiv.appendChild(enlaceContent);
+        enlacesContainer.appendChild(enlaceDiv);
+        } 
+        var enlacesLetra = document.getElementsByClassName("letra");
+ for (var i = 0; i < enlacesLetra.length; i++) {
+    enlacesLetra[i].onclick = guardarTextoEnlace;
+ }
+    // Función para guardar el texto del enlace al presionar el boton
+        function guardarTextoEnlace() {
+            var enlace = this; // hace referencia al elemento en el que se hizo clic
+            var textoEnlace = enlace.textContent; 
+            localStorage.setItem('textoEnlace', textoEnlace);
+        }
+    </script>
 </body>
 
 
@@ -58,12 +177,37 @@
     var resultadoDiv = document.getElementById("titulo2");
     // Imprimir la variable en el elemento HTML
     resultadoDiv.textContent = textoTitulo;
+
 </script>
+
 <style>
     body {
-        background: #FFEFBA;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: #d9a7c7;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #fffcdc, #d9a7c7);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #fffcdc, #d9a7c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        margin: 0 2%;
+        align-items: center;
+        text-align: center;
+        
+    }
+
+    .grid-item img {
+        max-width: 90%;
+        
+        
+    }
+    .textoNombre{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 2vw;
+      
+        color: #d02121;
+    }
+
 </style>

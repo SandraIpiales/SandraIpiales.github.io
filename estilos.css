@@ -12,6 +12,9 @@ body {
     display: flex;
     flex-direction: row;
 }
+.fondoP{
+    width: 100%;
+}
 .contenedorPortada{
     width: 100%;
     height: 50%;
@@ -39,7 +42,7 @@ body {
 
 .subtitulo {
     margin-top: 100px;
-    background-color: #b80b78;
+    /*background-color: #b80b78;*/
     color: #000;
     /*display: inline;*/
     font-size: 5vw;

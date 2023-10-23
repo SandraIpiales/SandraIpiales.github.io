@@ -18,9 +18,10 @@
     flex-direction: column; /* Coloca el contenido en una columna (opcional) */
     justify-content: center; /* Centra verticalmente el contenido */
     align-items: center; /* Centra horizontalmente el contenido */
-    background-color: aqua;
+    /*background-color: rgb(232, 240, 240);*/
     color: black;
     font-size: 40px;
     font-family: 'Dancing Script', cursive;
+    
     margin-bottom: 40px;
 }
