@@ -1,27 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Oswald:wght@700&family=Trispace&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital@1&display=swap');
 
 .slide-container{
-  max-width: 1500px;
+  max-width: 1800px;
   width: 100%;
   display: flex;
   margin: 25px 0;
 
 }
 .slide-content{
-  margin: 0 2%;
+  margin: 0 5%;
   border-radius: 25px;
   
 }
 .cardletras{
   border-radius: 70%;
-  border: 2px solid #1c010e; 
-  box-shadow: 0 10px 20px 0 rgba(253, 188, 224, 0.382);
+  border: 1px solid rgba(164, 95, 15, 0.84); 
+  box-shadow: 5px 10px 10px 5px rgba(73, 65, 69, 0.382);
   background-size: cover;
   text-decoration: none;
   transition: 0.3s;
+  margin-bottom: 25px;
   
 }
 /*Encabezado de Menu*/
@@ -78,17 +79,17 @@ flex: 40%;
 }
 .card-content:hover{
     box-shadow: 0 0px 20px 0 rgba(223, 226, 232, 0.268);
-    background-color: #d646ab2d; /* Nuevo color al pasar el mouse */
+    background-color: #e8ecb659; /* Nuevo color al pasar el mouse */
     border-radius: 75%;
 
 }
 
 .letra{
-  font-family: 'Trispace', sans-serif;
-  
-  font-size: 1.2vw;
+  font-family: 'PT Serif', serif;
+  font-size: 1.8vw;
   font-weight: 500;
-  padding: 30px;
+  padding: 10px 30px ;
+  padding-bottom: 30px;
   border-radius: 15px;
   color:#792727;
   text-decoration: none;
