@@ -138,7 +138,9 @@
      ];
      
      // Ruta de la carpeta que contiene las imágenes
- const folderPath = 'img/img/collares/';
+     const folderPath = window.location.pathname.endsWith('/')
+  ? 'img/img/' + textoTitulo + '/'
+  : 'img/img/' + textoTitulo + '/';
  console.log("Val",textoTitulo)
  // Elemento contenedor de la cuadrícula
  const imageGrid = document.getElementById('imageGrid');
