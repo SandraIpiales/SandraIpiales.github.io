@@ -69,7 +69,7 @@
     <script src="js/script-slider.js"></script>
     <script>
         // Arreglo de strings para los enlaces
-        var letras = ["collares", "Anillos", "Flores", "Gorros","Bolsos"];
+        var letras = ["Collares", "Anillos", "Flores", "Gorros","Bolsos"];
         
         // Obtener el contenedor de los enlaces por su ID
         var enlacesContainer = document.getElementById("enlacesContainer");
@@ -136,12 +136,10 @@
      { "nombre": "Piedras", "precio": "2.50" },
      // Agrega más objetos de collares aquí
      ];
-     console.log("Cambio1")
+     
      // Ruta de la carpeta que contiene las imágenes
-     const folderPath = window.location.pathname.endsWith('/')
-  ? 'img/img/' + textoTitulo + '/'
-  : 'img/img/' + textoTitulo + '/';
- console.log("Val",textoTitulo, folderPath)
+ const folderPath = '/img/img/'+textoTitulo+'/';
+ console.log("Val",textoTitulo)
  // Elemento contenedor de la cuadrícula
  const imageGrid = document.getElementById('imageGrid');
  
