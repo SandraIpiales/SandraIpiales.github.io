@@ -136,9 +136,13 @@
      { "nombre": "Piedras", "precio": "2.50" },
      // Agrega más objetos de collares aquí
      ];
-     
+     // Obtén la URL actual de la página
+const currentURL = window.location.href;
+
+// Construye la ruta a la carpeta de imágenes
+const folderPath = currentURL + 'img/img/'+textoTitulo+'/';
      // Ruta de la carpeta que contiene las imágenes
- const folderPath = './'+textoTitulo+'/';
+
  console.log("Val",textoTitulo, folderPath)
  // Elemento contenedor de la cuadrícula
  const imageGrid = document.getElementById('imageGrid');
