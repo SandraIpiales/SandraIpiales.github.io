@@ -155,7 +155,7 @@
  
        // Filtrar solo los enlaces que son imágenes (por extensión)
        const imageLinks = links.filter(link => link.href.match(/\.(jpg|jpeg|png|gif)$/i));
- 
+       console.log("txxtFuera", imageLinks)
        // Crear elementos de imagen y agregarlos a la cuadrícula
        imageLinks.forEach((link, index) => {
          const img = document.createElement('img');
