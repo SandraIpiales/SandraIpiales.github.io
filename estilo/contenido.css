@@ -1,0 +1,67 @@
+
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        margin: 0 2%;
+        align-items: center;
+        text-align: center;
+        
+    }
+    .grid-item{
+        box-shadow: 7px 3px 7px rgba(0, 0, 0, 0.4);
+        margin: 20px;
+        padding: 10px;
+        max-height: 500px;
+        border-radius: 15px;
+    }
+
+    .grid-item img {
+        max-width: 100%;
+        height:50%;
+        border-radius: 15px;
+        
+    }
+   
+    .content-Texto{
+        text-align: center;
+        background-color: #ffdcee86;
+        border-radius: 5%;
+        box-shadow: 7px 3px 7px rgba(0, 0, 0, 0.4);
+        margin: 15px;
+        padding: 10px 8px ;
+        padding-top: 1px;
+    }
+    h2{
+        font-size: 2vw;
+        color: #583609;
+        font-family: 'PT Serif', serif;
+    }
+    p{
+        /*font-family: 'Dancing Script', cursive;
+        font-size: 1.5vw;*/
+    }
+    .tPrecio{
+        display: flex; 
+        flex-direction: row; 
+        justify-content: space-around;
+        font-family: 'Dancing Script', cursive;
+        color: #80630f;
+        font-size: 1.5vw;
+    }
+    .seleccionado{
+        display: flex; /* Hace que el contenido se comporte como un flex container */
+        flex-direction: column; /* Coloca el contenido en una columna (opcional) */
+        justify-content: center; /* Centra verticalmente el contenido */
+        align-items: center; /* Centra horizontalmente el contenido */
+        /*background-color: rgb(232, 240, 240);*/
+        color: black;
+        font-size: 40px;
+        font-family: 'Dancing Script', cursive;
+        margin:  0px;
+    }
+
+

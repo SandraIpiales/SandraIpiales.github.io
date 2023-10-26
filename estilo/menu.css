@@ -79,7 +79,7 @@ flex: 40%;
 }
 .card-content:hover{
     box-shadow: 0 0px 20px 0 rgba(223, 226, 232, 0.268);
-    background-color: #e8ecb659; /* Nuevo color al pasar el mouse */
+    background-color: #e1b81359; /* Nuevo color al pasar el mouse */
     border-radius: 75%;
 
 }
@@ -93,6 +93,7 @@ flex: 40%;
   border-radius: 15px;
   color:#792727;
   text-decoration: none;
+  text-align: center;
   
 }
 

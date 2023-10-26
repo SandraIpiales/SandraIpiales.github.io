@@ -130,3 +130,10 @@ h3{
     margin-top: 20px;
     font-size: 1vw;
 }
+.iconMenu{
+    margin: 10px; 
+    font-size: 40px;
+     color: rgba(164, 95, 15, 0.84); 
+     text-shadow: 0 #b6a6a697;
+     
+}
