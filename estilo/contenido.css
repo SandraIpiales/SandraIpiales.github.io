@@ -1,6 +1,6 @@
 
     @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
-
+    @import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@300&display=swap');
 
     .grid-container {
         display: grid;
@@ -62,6 +62,10 @@
         font-size: 40px;
         font-family: 'Dancing Script', cursive;
         margin:  0px;
+    }
+    .pDescrip{
+        margin: 20px;
+        font-family: 'Playpen Sans', cursive;
     }
 
 
