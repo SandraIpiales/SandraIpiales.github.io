@@ -104,9 +104,9 @@
         enlacesContainer.appendChild(enlaceDiv);
         } 
         var enlacesLetra = document.getElementsByClassName("letra");
-        for (var i = 0; i < enlacesLetra.length; i++) {
-            enlacesLetra[i].onclick = guardarTextoEnlace;
-        }
+ for (var i = 0; i < enlacesLetra.length; i++) {
+    enlacesLetra[i].onclick = guardarTextoEnlace;
+ }
     // Función para guardar el texto del enlace al presionar el boton
         function guardarTextoEnlace() {
             var enlace = this; // hace referencia al elemento en el que se hizo clic
