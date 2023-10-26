@@ -60,10 +60,81 @@
         <div class="swiper-pagination"></div>
     </div>
   </div>
-      <div class="seleccionado" id="titulo2">    </div>
-      <div id="imageGrid" class="grid-container"></div>
+      
+    <div id="tarjeta" style="display: none;">
+        <!-- Contenido de la tarjeta -->
+        
+        <div class="seleccionado" id="titulo2">    </div>
+      <div id="imageGrid" class="grid-container">
+        
+        <div class="grid-item">
+            
+            <img src="img/Collares/1.jpg" alt="">
+            <div class="contenenTexto">
+                <h3>Collar de Conchas</h3>
+                <p>Precio:</p>
+                <p>$6.50</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div id="textoCollares"> </div>
+            <img src="img/Collares/2.jpg" alt="">
 
-    
+        </div>
+        <div class="grid-item">
+            <div id="textoCollares"> </div>
+            <img src="img/Collares/3.jpg" alt="">
+
+        </div>
+        <div class="grid-item">
+            <div id="textoCollares"> </div>
+            <img src="img/Collares/4.jpg" alt="">
+
+        </div>
+        <div class="grid-item">
+            <div id="textoCollares"> </div>
+            <img src="img/Collares/5.jpg" alt="">
+
+        </div>
+      </div>
+    </div>
+    <div id="tarjeta_Pulseras" style="display: none;">
+        <!-- Contenido de la tarjeta -->
+        
+        <div class="seleccionado" id="titulo2">    </div>
+      <div id="imageGrid" class="grid-container">
+        
+        <div class="grid-item">
+            
+            <img src="img/Collares/1.jpg" alt="">
+            <div class="content-Texto">
+                <h2>Collar de Conchas</h2>
+                <p>Precio:</p>
+                <p>$6.50</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div id="textoCollares"> </div>
+            <img src="img/Collares/2.jpg" alt="">
+
+        </div>
+        <div class="grid-item">
+            <div id="textoCollares"> </div>
+            <img src="img/Collares/3.jpg" alt="">
+
+        </div>
+        <div class="grid-item">
+            <div id="textoCollares"> </div>
+            <img src="img/Collares/4.jpg" alt="">
+
+        </div>
+        <div class="grid-item">
+            <div id="textoCollares"> </div>
+            <img src="img/Collares/5.jpg" alt="">
+
+        </div>
+      </div>
+    </div>
    
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/script-slider.js"></script>
@@ -114,13 +185,16 @@
             localStorage.setItem('textoEnlace', textoEnlace);
         }
     </script>
+
+
+
+
 </body>
 
 
 </html>
 <script>
     // Obtener la variable desde LocalStorage
-    
     var variable = localStorage.getItem('textoEnlace'); 
     const miVariable = variable.toString();  
     var textoTitulo =  miVariable;
@@ -132,71 +206,19 @@
 
 </script>
 <script>
-        const d_collares = [
-        { "nombre": "Piedras", "precio": "3.50" },
-        { "nombre": "Piedras", "precio": "1.50" },
-        { "nombre": "Piedras", "precio": "6.50" },
-        { "nombre": "Piedras", "precio": "12.50" },
-        { "nombre": "Piedras", "precio": "2.50" },
-        { "nombre": "Piedras", "precio": "2.50" },
-        { "nombre": "Piedras", "precio": "2.50" },
-        { "nombre": "Piedras", "precio": "2.50" },
-        { "nombre": "Piedras", "precio": "2.50" },
-        { "nombre": "Piedras", "precio": "2.50" },
-        { "nombre": "Piedras", "precio": "2.50" },
-        // Agrega más objetos de collares aquí
-        ];
         
-        // Ruta de la carpeta que contiene las imágenes
-    const folderPath = 'img/' + textoTitulo + '/';
-    console.log("Val",textoTitulo, folderPath)
-    // Elemento contenedor de la cuadrícula
-    const imageGrid = document.getElementById('imageGrid');
-    
-    function loadImages() {
-    // Realizar una petición AJAX para obtener el listado de archivos en la carpeta
-    fetch(folderPath)
-        .then(response => response.text())
-        .then(data => {
-        // Parsear el HTML de la carpeta para obtener los nombres de los archivos
-        const parser = new DOMParser();
-        const htmlDoc = parser.parseFromString(data, 'text/html');
-        const links = Array.from(htmlDoc.querySelectorAll('a'));
-    
-        // Filtrar solo los enlaces que son imágenes (por extensión)
-        const imageLinks = links.filter(link => link.href.match(/\.(jpg|jpeg|png|gif)$/i));
-        console.log("txxtFuera", imageLinks)
-        // Crear elementos de imagen y agregarlos a la cuadrícula
-        imageLinks.forEach((link, index) => {
-            const img = document.createElement('img');
-            const urlParts = link.href.split('/');
-            const imageName = urlParts[urlParts.length - 1];
-            img.src = folderPath + imageName;
-            console.log("txxtDentro", img.src , imageName)
-            
-            const gridItem = document.createElement('div');
-            gridItem.classList.add('grid-item');
-            gridItem.appendChild(img);
-    
-            // Crear un elemento de texto y agregarlo al gridItem
-            const text = document.createElement('div');
-            text.textContent = `${d_collares[index].nombre} `;
-            text.classList.add('textoNombre');
-            // Crear un elemento de texto y agregarlo al gridItem
-            const text2 = document.createElement('div');
-            text2.textContent = ` Precio: $${d_collares[index].precio}`;
-            gridItem.appendChild(text);
-            gridItem.appendChild(text2);
-    
-            imageGrid.appendChild(gridItem);
-        });
-        })
-        .catch(error => console.error('Error:', error));
-    }
-    
-    // Llamar a la función para cargar y mostrar imágenes
-    loadImages();
  
+    </script>
+    <script>
+        // Comprueba si la variable tipoDeProducto es mayor que "Collar"
+        if (textoTitulo == "Collares") {
+            // Si la condición es verdadera, muestra la tarjeta
+            document.getElementById('tarjeta').style.display = 'block';
+        }
+        if (textoTitulo == "Pulseras") {
+            // Si la condición es verdadera, muestra la tarjeta
+            document.getElementById('tarjeta_Pulseras').style.display = 'block';
+        }
     </script>
 <style>
     body {
@@ -218,14 +240,29 @@
 
     .grid-item img {
         max-width: 90%;
-        
-        
+        border-radius: 15px;
     }
     .textoNombre{
         font-family: Georgia, 'Times New Roman', Times, serif;
         font-size: 2vw;
-      
         color: #d02121;
     }
+    .content-Texto{
+        text-align: center;
+        background: #9796f0;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #fbc7d4, #9796f0);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #fbc7d4, #9796f0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        border-radius: 5%;
+        box-shadow: 7px 3px 7px rgba(0, 0, 0, 0.4);
+        margin: 15px;
+        padding: 10px 8px ;
+    }
+    h2{
+        font-size: 2vw;
+        color: #583609;
+        font-family: 'PT Serif', serif;
+    }
+
 
 </style>
