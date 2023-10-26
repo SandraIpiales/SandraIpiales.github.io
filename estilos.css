@@ -127,7 +127,7 @@ h3{
     color: #36221c;
 }
 .contUbicacion{
-    margin-top: 20px;
+    margin: 20px 0;
     font-size: 1vw;
 }
 .iconMenu{
@@ -137,3 +137,12 @@ h3{
      text-shadow: 0 #b6a6a697;
      
 }
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 920px) and (max-height: 1280px){
+    .contUbicacion{
+        
+        font-size: 2vw;
+    }
+
+  }
