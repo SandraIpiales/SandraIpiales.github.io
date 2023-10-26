@@ -65,3 +65,21 @@
     }
 
 
+      /* Responsive layout - makes a one column-layout instead of two-column layout */
+      @media (max-width: 920px) and (max-height: 1280px){
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            
+            
+        }
+        h2{
+        font-size: 3vw;
+        
+        }
+        .tPrecio{
+            
+            font-size: 3vw;
+        }
+
+      }
