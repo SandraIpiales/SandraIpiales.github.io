@@ -138,6 +138,8 @@
         </div>
       </div>
     </div>
+
+    <!--Pulseras-->
     <div id="tarjeta_Pulseras" style="display: none;">
         <!-- Contenido de la tarjeta -->
         
@@ -215,6 +217,8 @@
         </div>
       </div>
     </div>
+
+    <!--Gorros-->
     <div id="tarjeta_Gorros" style="display: none;">
         <!-- Contenido de la tarjeta -->
         
@@ -293,6 +297,85 @@
       </div>
     </div>
 
+    <!--Amigurumis-->
+    <div id="tarjeta_Amigurumis" style="display: none;">
+        <!-- Contenido de la tarjeta -->
+        
+        <div class="seleccionado" id="titulo2">    </div>
+      <div id="imageGrid" class="grid-container">
+        
+        <div class="grid-item">
+            <img src="img/Amigurumis/1.jpg" alt="">
+            <div class="content-Texto">
+                <h2>Collar de Conchas</h2>
+                <div style="display: flex; flex-direction: row; justify-content: space-around;">
+                    <p>Precio:</p>
+                    <p class="valor">$6.50</p>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <img src="img/Amigurumis/2.jpg" alt="">
+            <div class="content-Texto">
+                <h2>Collar de Conchas</h2>
+                <div style="display: flex; flex-direction: row; justify-content: space-around;">
+                    <p>Precio:</p>
+                    <p class="valor">$6.50</p>
+                </div>
+            </div>
+        </div><div class="grid-item">
+            <img src="img/Amigurumis/3.jpg" alt="">
+            <div class="content-Texto">
+                <h2>Collar de Conchas</h2>
+                <div style="display: flex; flex-direction: row; justify-content: space-around;">
+                    <p>Precio:</p>
+                    <p class="valor">$6.50</p>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <img src="img/Amigurumis/4.jpg" alt="">
+            <div class="content-Texto">
+                <h2>Collar de Conchas</h2>
+                <div style="display: flex; flex-direction: row; justify-content: space-around;">
+                    <p>Precio:</p>
+                    <p class="valor">$6.50</p>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <img src="img/Amigurumis/5.jpg" alt="">
+            <div class="content-Texto">
+                <h2>Collar de Conchas</h2>
+                <div style="display: flex; flex-direction: row; justify-content: space-around;">
+                    <p>Precio:</p>
+                    <p class="valor">$6.50</p>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <img src="img/Amigurumis/6.jpg" alt="">
+            <div class="content-Texto">
+                <h2>Collar de Conchas</h2>
+                <div style="display: flex; flex-direction: row; justify-content: space-around;">
+                    <p>Precio:</p>
+                    <p class="valor">$6.50</p>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <img src="img/Amigurumis/7.jpg" alt="">
+            <div class="content-Texto">
+                <h2>Collar de Conchas</h2>
+                <div style="display: flex; flex-direction: row; justify-content: space-around;">
+                    <p>Precio:</p>
+                    <p class="valor">$6.50</p>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
    
     
 </body>
@@ -303,7 +386,7 @@
     <script src="js/script-slider.js"></script>
     <script>
         // Arreglo de strings para los enlaces
-        var letras = ["Collares", "Pulseras","Anillos", "Flores", "Gorros","bolsos","Snacks"];
+        var letras = ["Collares", "Pulseras","Amigurumis", "Flores", "Gorros","bolsos","Snacks"];
         var iconos = ["fa-solid fa-gem","fa-brands fa-gratipay","fa-solid fa-chess-queen","fa-solid fa-fan","fa-solid fa-hand-peace","fa-solid fa-bag-shopping","fa-solid fa-star","fa-solid fa-candy-cane"];
         // Obtener el contenedor de los enlaces por su ID
         var enlacesContainer = document.getElementById("enlacesContainer");
@@ -382,6 +465,10 @@
             // Si la condición es verdadera, muestra la tarjeta
             document.getElementById('tarjeta_Bolsos').style.display = 'block';
         }
+        if (textoTitulo == "Amigurumis") {
+            // Si la condición es verdadera, muestra la tarjeta
+            document.getElementById('tarjeta_Amigurumis').style.display = 'block';
+        }
     </script>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
@@ -404,6 +491,7 @@
 
     .grid-item img {
         max-width: 90%;
+        height:50%;
         border-radius: 15px;
     }
    
