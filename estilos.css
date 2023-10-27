@@ -117,7 +117,8 @@ header{
 footer {
     text-align: center; /* Centra el contenido del pie de página horizontalmente */
    /* background-color: #574c58a2;  Establece un color de fondo para el pie de página, opcional */
-    color: #5b4011; /* Establece el color del texto, opcional */
+    color: #eee6d8; /* Establece el color del texto, opcional */
+    font-family: 'PT Serif', serif;
     padding: 10px; /* Añade un poco de espacio alrededor del texto, opcional */
 }
 h3{
